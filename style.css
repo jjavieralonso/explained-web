@@ -179,6 +179,8 @@ hr {
     gap: 6vh;
 
     video {
+        width: 560px;
+        height: 420px;
         filter: drop-shadow(-4px 4px 8px #0065b875);
     }
 
@@ -229,6 +231,7 @@ hr {
     position: relative;
     background-color: #1b1b1b;
     filter: drop-shadow(1px -1px 2px #0066B8);
+
     .slider-images {
         display: inline-block;
         animation: 20s slide infinite linear;
@@ -250,10 +253,11 @@ hr {
         left: 0;
         width: 20%;
         height: 100%;
-        background: linear-gradient(to left,transparent, #1b1b1b);
+        background: linear-gradient(to left, transparent, #1b1b1b);
         pointer-events: none;
         z-index: 9;
     }
+
     &:after {
         content: '';
         position: absolute;
@@ -261,11 +265,12 @@ hr {
         right: 0;
         width: 20%;
         height: 100%;
-        background: linear-gradient(to right,transparent, #1b1b1b);
+        background: linear-gradient(to right, transparent, #1b1b1b);
         pointer-events: none;
         z-index: 9;
     }
-    p{
+
+    p {
         display: flex;
         justify-content: center;
         font-family: "Thunder", sans-serif;
@@ -284,4 +289,56 @@ hr {
     to {
         transform: translateX(-100%);
     }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .title {
+        h1 {
+            font-size: 60px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+    }
+
+    .download {
+        flex-direction: column;
+        align-items: center;
+        gap: 75px;
+
+        aside {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            ol li {
+                text-align: center;
+            }
+        }
+    }
+
+    .features {
+
+        .how-to-use,
+        .feature-1 {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .video-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        video {
+            width: 320px;
+            height: 240px;
+        }
+    }
+
 }
